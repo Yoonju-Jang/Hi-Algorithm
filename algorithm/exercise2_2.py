@@ -4,6 +4,7 @@
 input_data = input()
 row = int(input_data[1])
 column = int(ord(input_data[0])) - int(ord('a')) + 1
+#int(ord(input_data[0])) - 96ㄴ
 # ord(문자): 유니코드 정수 반환 <-> chr(정수): 해당 문자 반환
 
 # 나이트가 이동할 수 있는 8가지 방향 정의

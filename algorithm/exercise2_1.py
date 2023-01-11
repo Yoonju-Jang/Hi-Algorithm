@@ -8,7 +8,7 @@ count = 0
 for i in range(h+1):
     for j in range(60):
         for k in range(60):
-            # '3'이 포함된 경우
+            # '3'이 포함된 경우 > !!"존재여부"를 파악할땐 문자열로 생각하기!!
             if '3' in str(i) + str(j) + str(k):
                 count += 1
 print(count)
