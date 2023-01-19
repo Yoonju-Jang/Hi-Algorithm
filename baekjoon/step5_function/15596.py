@@ -1,7 +1,7 @@
 #15596
 
 def solve (a):
-    result = sum(a)
-    return result
+    return sum(a)
+    
 n = list(map(int,input().split()))
 print(solve(n))
