@@ -25,8 +25,6 @@ def bfs(x,y):
 
     return graph[n-1][m-1]
 
-
-
 n, m = map(int,input().split())
 
 # 2차원 리스트의 맵 정보 입력 받기

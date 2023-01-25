@@ -3,6 +3,7 @@
 # 시간 복잡도는 평균적으로 O(NlogN)
 # !but! 이미 정렬된 배열에 대해선 O(N^2)
 
+# 구현1) 정석
 array = [7,5,9,0,3,1,6,2,4,8]
 
 def quick_sort(array, start, end):
@@ -27,6 +28,22 @@ def quick_sort(array, start, end):
     quick_sort(array, right+1, end)
 
 
-
 quick_sort(array, 0, len(array)-1)
 print(array)
+
+# 구현2) 파이썬에 특화
+array = [7,5,9,0,3,1,6,2,4,8]
+
+def quick_sort2(array):
+    # 리스트가 하나 이하의 원소만을 담고 있다면 종료
+    if len(array) <= 1: 
+        return
+    pivot = array[0]
+    tail = array[1:] # 피벗을 제외한 리스트
+
+    left_side = [x for x in tail if x <= pivot]
+    right_side = [x for x in tail if x > pivot]
+
+    return quick_sort2(left_side) + [pivot] + quick_sort2(right_side)
+
+print(quick_sort2(array))

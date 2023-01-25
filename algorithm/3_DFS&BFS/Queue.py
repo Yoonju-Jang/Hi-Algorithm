@@ -1,6 +1,5 @@
 # 큐 : 입구와 출구가 모두 뚫려 있는 터널 형태
-# 리스트로 구현 가능하지만 시간 비효율 
-# -> deque 라이브러리 사용
+# deque 라이브러리 사용
 
 from collections import deque
 

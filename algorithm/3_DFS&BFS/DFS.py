@@ -1,4 +1,4 @@
- def dfs(graph, v, visited):
+def dfs(graph, v, visited):
     # 현재 노드 방문 처리
     visited[v] = True
     print(v, end=' ')
@@ -21,8 +21,13 @@ graph = [
 ]
 
 # 각 노드가 방문된 정보를 표현(1차원 리스트)
-# '*9' : 인덱스 0 사용하지 않으려고
+# '*9' : 인덱스 0을 Skip하고자
 visited = [False]*9  
 
 # 정의된 DFS 함수 호출
 dfs(graph, 1, visited)
+
+
+# 정리)
+# visited : 노드의 방문기록 저장
+# graph : 노드의 연결정보 저장

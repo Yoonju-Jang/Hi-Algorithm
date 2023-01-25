@@ -11,9 +11,6 @@ def dfs(x,y):
         return False
     #현재 노드를 아직 방문하지 않았다면
     if graph[x][y] == 0:
-        global num
-        num+=1
-        print(x,y)
         # 해당 노드 방문 처리
         graph[x][y] = 1  
         # 상, 하, 좌, 우의 위치들도 모두 재귀적으로 호출
@@ -37,18 +34,15 @@ for i in range(n):
 
 # 모든 노드(위치)에 대하여 음료수 채우기
 result = 0   # 아이스크림 갯수 
-l_num=[]
 for i in range(n):
     for j in range(m):
         # 현위치에서 DFS 수행
-        num=0
+        dfs(i, j)
         if dfs(i, j) == True:
             result += 1
-            l_num.append(num)
 
 print(result)
-for i in l_num:
-    print(i)
+
 # 아이스크림 시작점에서 dfs 수행
 # -> 1) 주변 모든 노드를 연결(방문)
 # -> 2) 시작점을 기준으로 아이스크림 1개만 생성
