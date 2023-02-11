@@ -3,7 +3,7 @@
 n = int(input())
 array = list(map(int,input().split()))
 
-d = [0]*100
+d = [0]*100  # 문제조건 <=100
 
 # 보텀업
 d[0] = array[0]
