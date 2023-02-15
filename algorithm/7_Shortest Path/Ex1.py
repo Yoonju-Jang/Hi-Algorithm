@@ -14,7 +14,6 @@ for _ in range(m):
     # x번 노드에서 y번 노드로 가는 비용이 z이다
     graph[x].append((y,z))
 
-
 def dijkstra(start):
     q = []
     # 시작 노드로 가기 위한 최단 경로는 0으로 설정하여, 큐에 삽입
